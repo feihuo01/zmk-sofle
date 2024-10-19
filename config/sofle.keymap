@@ -43,11 +43,11 @@
 
         layer0 {
             bindings = <
-&kp ESC         &kp N1            &kp N2     &kp N3  &kp N4  &kp N5    &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9     &kp N0        &kp BACKSPACE
-&kp TAB         &kp Q             &kp W      &kp E   &kp R   &kp T     &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O      &kp P         &kp EQUAL
-&kp LEFT_ARROW  &kp A             &kp S      &kp D   &kp F   &kp G     &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L      &kp RETURN    &kp RIGHT
-&kp LSHFT       &kp Z             &kp X      &kp C   &kp V   &kp B     &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA  &kp DOT    &kp COLON     &kp DOUBLE_QUOTES
-&kp C_MUTE      &kp LEFT_COMMAND  &kp LCTRL  &mo 2   &mo 1   &mo 3     &kp ENTER        &kp BACKSPACE  &kp SPACE  &kp SPACE  &kp CARET  &kp QUESTION
+&kp ESC         &kp N1            &kp N2     &kp N3        &kp N4  &kp N5    &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9     &kp N0        &kp BACKSPACE
+&kp TAB         &kp Q             &kp W      &kp E         &kp R   &kp T     &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O      &kp P         &kp EQUAL
+&kp LEFT_ARROW  &kp A             &kp S      &kp D         &kp F   &kp G     &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L      &kp RETURN    &kp RIGHT
+&kp LSHFT       &kp Z             &kp X      &kp C         &kp V   &kp B     &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA  &kp DOT    &kp COLON     &kp DOUBLE_QUOTES
+&kp C_MUTE      &kp LEFT_COMMAND  &kp LCTRL  &kp LEFT_ALT  &mo 1   &mo 2     &kp ENTER        &kp BACKSPACE  &kp SPACE  &kp SPACE  &kp CARET  &kp QUESTION
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -56,11 +56,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2        &kp F3        &kp F4        &kp F5          &mmv MOVE_UP     &kp F6     &kp F7                &kp F8                 &kp F9            &kp F10    &kp INSERT
-&kp TILDE   &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT     &mmv MOVE_DOWN   &kp PG_UP  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER         &kp MINUS  &kp PLUS
-&trans      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE          &kp SEMI   &kp APOS
-&trans      &trans           &trans        &trans        &trans        &trans          &mmv MOVE_RIGHT  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH     &kp SLASH  &kp SLASH
-&kp C_MUTE  &kp LEFT_ALT     &trans        &trans        &trans        &trans          &mkp LCLK        &trans     &trans                &kp LESS_THAN          &kp GREATER_THAN  &trans
+&trans      &kp F1           &kp F2        &kp F3          &kp F4           &kp F5          &mmv MOVE_UP     &kp F6        &kp F7            &kp F8             &kp F9                &kp F10                &kp INSERT
+&kp TILDE   &kp EXCLAMATION  &kp AT        &kp HASH        &kp DOLLAR       &kp PERCENT     &mmv MOVE_DOWN   &kp CARET     &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS
+&kp GRAVE   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4     &kp NUMBER_5    &mmv MOVE_LEFT   &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9          &kp NUMBER_0           &kp MINUS
+&kp F11     &kp F12          &kp PIPE      &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans          &mmv MOVE_RIGHT  &kp UNDER     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH         &kp SLASH              &kp APOSTROPHE
+&kp C_MUTE  &trans           &trans        &trans          &trans           &trans          &mkp LCLK        &trans        &trans            &kp LESS_THAN      &kp GREATER_THAN      &kp SEMICOLON
             >;
 
             display-name = "layer1";
@@ -69,24 +69,14 @@
 
         layer_2 {
             bindings = <
-&trans  &trans        &trans         &trans        &trans                &trans                   &mmv MOVE_UP     &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans  &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &mmv MOVE_DOWN   &bt BT_CLR      &bt BT_CLR_ALL   &bt BT_NXT       &trans        &trans        &trans
-&trans  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0             &mmv MOVE_LEFT   &out OUT_USB    &out OUT_BLE     &trans           &trans        &trans        &trans
-&trans  &trans        &trans         &bootloader   &trans                &trans                   &mmv MOVE_RIGHT  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_EFF  &soft_off     &bootloader   &sys_reset
-&trans  &trans        &trans         &trans        &trans                &trans                   &mkp LCLK        &trans          &trans           &trans           &trans        &trans
+&trans  &trans  &trans          &trans          &trans           &trans    &mmv MOVE_UP     &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans  &trans  &trans          &kp UP_ARROW    &trans           &trans    &mmv MOVE_DOWN   &bt BT_CLR      &bt BT_CLR_ALL   &bt BT_NXT       &trans        &trans        &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans    &mmv MOVE_LEFT   &out OUT_USB    &out OUT_BLE     &trans           &trans        &trans        &trans
+&trans  &trans  &trans          &trans          &trans           &trans    &mmv MOVE_RIGHT  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_EFF  &soft_off     &bootloader   &sys_reset
+&trans  &trans  &trans          &trans          &trans           &trans    &mkp LCLK        &bootloader     &trans           &trans           &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &kp UP_ARROW    &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
         };
     };
 };
